@@ -78,22 +78,22 @@ python distance/ev_eva_plot.py --date 2020-03-27
 
 ```mermaid
 flowchart LR
-    subgraph PREP
-        A[CSV prices] -->|log returns| B[distance_matrix.py]
-    end
-    subgraph ANALYTICS
-        B --> C[NeCe.py\n(ΔH, efficiency)]
-        B --> D[lambda_max_vector.py]
-        D --> E[PCA.py]
-        B --> F[average_degree.py]
-    end
-    subgraph REPORT
-        C --> G(table/20_days.py)
-        F --> G
-        E --> G
-        G --> H[paper/ main.tex]
-    end
-```
+  subgraph PREP
+    A[CSV prices] -->|log returns| B[distance_matrix.py]
+  end
+  subgraph ANALYTICS
+    B --> C[NeCe.py (ΔH & efficiency)]
+    B --> D[lambda_max_vector.py]
+    D --> E[PCA.py]
+    B --> F[average_degree.py]
+  end
+  subgraph REPORT
+    C --> G[table/20_days.py]
+    F --> G
+    E --> G
+    G --> H[paper/main.tex]
+  end
+
 
 Feel free to jump in anywhere – every node in that graph is an *independent* script.
 
