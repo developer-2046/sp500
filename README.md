@@ -82,16 +82,16 @@ flowchart LR
     A[CSV prices] -->|log returns| B[distance_matrix.py]
   end
   subgraph ANALYTICS
-    B --> C[NeCe.py (Entropy Change and efficiency)]
-    B --> D[lambda_max_vector.py]
-    D --> E[PCA.py]
-    B --> F[average_degree.py]
+    B - C[NeCe.py (Entropy Change and efficiency)]
+    B - D[lambda_max_vector.py]
+    D - E[PCA.py]
+    B - F[average_degree.py]
   end
   subgraph REPORT
-    C --> G[table/20_days.py]
-    F --> G
-    E --> G
-    G --> H[paper/main.tex]
+    C - G[table/20_days.py]
+    F - G
+    E - G
+    G - H[paper/main.tex]
   end
 ```
 
