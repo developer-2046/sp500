@@ -82,7 +82,7 @@ flowchart LR
     A[CSV prices] -->|log returns| B[distance_matrix.py]
   end
   subgraph ANALYTICS
-    B --> C[NeCe.py (ΔH & efficiency)]
+    B --> C[NeCe.py (Entropy Change & efficiency)]
     B --> D[lambda_max_vector.py]
     D --> E[PCA.py]
     B --> F[average_degree.py]
