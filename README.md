@@ -93,7 +93,7 @@ flowchart LR
     E --> G
     G --> H[paper/main.tex]
   end
-
+```
 
 Feel free to jump in anywhere – every node in that graph is an *independent* script.
 
